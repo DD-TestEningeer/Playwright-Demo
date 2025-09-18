@@ -231,7 +231,4 @@ test('Add a todo item', async ({ page }) => {
 ✅ You can generate **reports, screenshots, and logs**.
 ✅ You worked with **real-world sites** (SauceDemo, ToDo app).
 
----
 
-
-Would you like me to **format this as a “trainer-friendly slide deck outline + demo script”** (like PPT slides + live demo instructions + Q\&A prompts), so you can directly present it in class?
