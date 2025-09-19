@@ -108,10 +108,54 @@ npm -v
 
 1. Create a folder:
 
-```bash
-mkdir playwright-training
-cd playwright-training
+How you can create the **Playwright project folder structure** using **CMD or Terminal or Git Bash or PowerShell** with simple commands.
+
+# Note - Use any one way
+
+---
+
+**1. Windows CMD**
+
+```cmd
+mkdir playwright-training && cd playwright-training && mkdir tests pages utils data config reports\screenshots reports\videos
 ```
+
+* Creates the main folder and subfolders including `reports\screenshots` and `reports\videos`.
+
+---
+
+**2. Linux / Mac Terminal**
+
+```bash
+mkdir -p playwright-training/{tests,pages,utils,data,config,reports/{screenshots,videos}} && cd playwright-training
+```
+
+* `-p` creates **parent directories automatically**.
+* Nested folders under `reports` are created in one command.
+
+---
+
+**3. Git Bash (Windows)**
+
+```bash
+mkdir -p playwright-training/{tests,pages,utils,data,config,reports/{screenshots,videos}} && cd playwright-training
+```
+
+* Same syntax as Linux/Mac terminal.
+* Works on Windows if Git Bash is installed.
+
+---
+
+**4. PowerShell**
+
+```powershell
+New-Item -Path playwright-training -ItemType Directory; Set-Location playwright-training; New-Item -ItemType Directory -Name tests, pages, utils, data, config, reports; New-Item -ItemType Directory -Path reports -Name screenshots, videos
+```
+
+* Creates the main folder, subfolders, and nested `reports/screenshots` and `reports/videos`.
+* `Set-Location` moves into the project folder.
+
+---
 
 2. Initialize npm:
 
@@ -128,56 +172,6 @@ npx playwright install
 
 * Installs browsers automatically (Chromium, Firefox, WebKit)
 * For Day 1, we’ll use **Chromium only**
-
-### How you can create the **Playwright project folder structure** using **CMD or Terminal or Git Bash or PowerShell** with simple commands.
-
-## Note - Use any one way
-
----
-
-## **1. Windows CMD**
-
-```cmd
-mkdir playwright-training && cd playwright-training && mkdir tests pages utils data config reports\screenshots reports\videos
-```
-
-* Creates the main folder and subfolders including `reports\screenshots` and `reports\videos`.
-
----
-
-## **2. Linux / Mac Terminal**
-
-```bash
-mkdir -p playwright-training/{tests,pages,utils,data,config,reports/{screenshots,videos}} && cd playwright-training
-```
-
-* `-p` creates **parent directories automatically**.
-* Nested folders under `reports` are created in one command.
-
----
-
-## **3. Git Bash (Windows)**
-
-```bash
-mkdir -p playwright-training/{tests,pages,utils,data,config,reports/{screenshots,videos}} && cd playwright-training
-```
-
-* Same syntax as Linux/Mac terminal.
-* Works on Windows if Git Bash is installed.
-
----
-
-## **4. PowerShell**
-
-```powershell
-New-Item -Path playwright-training -ItemType Directory; Set-Location playwright-training; New-Item -ItemType Directory -Name tests, pages, utils, data, config, reports; New-Item -ItemType Directory -Path reports -Name screenshots, videos
-```
-
-* Creates the main folder, subfolders, and nested `reports/screenshots` and `reports/videos`.
-* `Set-Location` moves into the project folder.
-
----
-
 
 
 ### **Step 4: Install Allure CLI (for reporting later)**
