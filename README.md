@@ -203,8 +203,18 @@ test('Verify page title of example.com', async ({ page }) => {
 
 ### **Run the Test**
 
+1) UI Mode 
 ```bash
-npx playwright test
+npx playwright test --ui
+```
+
+2) UI Mode with Browser only
+```bash
+npx playwright test --headed
+```
+3) Headless Mode
+```bash
+npx playwright test 
 ```
 
 * Output shows test execution in console
